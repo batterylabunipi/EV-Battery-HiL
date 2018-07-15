@@ -1,0 +1,116 @@
+\documentclass[conference,letterpaper]{IEEEtran}
+
+
+\usepackage{cite}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage[cmex10]{amsmath}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{xspace}
+\usepackage{multirow}
+
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  \usepackage{epstopdf}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+
+\renewcommand{\textohm}{\ensuremath{\Omega}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\newcommand{\vM} {v_{\mathrm{M}}}
+%\newcommand{\soc}{\mathit{SoC}}
+\newcommand{\soc}{SOC\xspace}
+\newcommand{\soh}{SOH\xspace}
+\newcommand{\hil}{HiL\xspace}
+
+\newcommand{\Qn} {Q_{\mathrm{n}}}
+\newcommand{\vT} {v_{\mathrm{T}}}
+\newcommand{\vR} {v_{\mathrm{R0}}}
+\newcommand{\vRC} {v_{\mathrm{RC}}}
+\newcommand{\vRCi} {v_{\mathrm{RC}i}}
+\newcommand{\iL} {i_{\mathrm{L}}}
+\newcommand{\Voc} {V_{\mathrm{OC}}}
+
+\newcommand{\comment}[1]{\hl{#1}}
+
+% Definizione dell'ambiente sistema per la creazione di sistemi nelle formule
+\newenvironment{sistema}%
+{\left\lbrace\begin{array}{@{}l@{}}}%
+	{\end{array}\right.}
+\usepackage{textcomp} % usato per i gradi celsius
+
+
+\begin{document}
+
+
+\begin{table}
+	\centering
+	\caption{Driving schedules details}\label{tab:driv_sched}\label{tab:cycles}
+	\begin{tabular}{lccc}
+		\toprule
+		Driving    &  Duration   & Distance  & Average speed    \\
+		schedule   &  (\si{\minute}) & (\si{\kilo\metre}) & (\si[per-mode=symbol]{\kilo\metre\per\hour}) \\ \midrule
+		UDDS	&	23	&	12.0	&	31.5\\
+		HWFET	&	13	&	16.5	&	77.5\\
+		FTP	&	31	&	17.8	&	34.1\\
+		EUDC	&	7	&	6.5	&	58.6\\
+		NEDC	&	20	&	8.3	&	25.4\\
+		ECE R15	&	3	&	0.9	&	16.5\\
+		WLTP class 3	&	30	&	23.2	&	46.5\\
+		ArtUrban	&	17	&	4.9	&	17.6\\
+		ArtRoad	&	18	&	17.3	&	57.4\\
+		ArtMw130	&	18	&	28.7	&	96.8\\
+		ArtMw150	&	18	&	29.5	&	99.5\\
+		J1015	&	15	&	6.3	&	25.6\\
+		IM240	&	4	&	3.1	&	47.1\\
+		SFTP US06	&	10	&	12.9	&	77.2\\
+		SFTP SC03	&	10	&	5.8	&	34.5\\
+		NYCC	&	10	&	1.9	&	11.4\\
+		LA92	&	24	&	15.8	&	39.6\\
+		LA92 short	&	16	&	11.2	&	41.8\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+% conference papers do not normally have an appendix
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+%The authors would like to thank...
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{4}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+
+% that's all folks
+\end{document}
+
+
